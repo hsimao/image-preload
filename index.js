@@ -5,6 +5,7 @@ const images = [
   "https://images.unsplash.com/photo-1496047017858-c558b925d95c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1526&q=80",
   "https://images.unsplash.com/photo-1527432734427-46138a6ef2df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
 ];
+
 // const images = [
 //   "./image/01.jpeg",
 //   "./image/02.jpeg",
@@ -25,6 +26,7 @@ btns = [...btns];
 
 // 使用PerLoad插件
 const preLoad = new PreLoad(images, {
+  order: "ordered", // 有序加載
   each: count => {
     // 每張照片加載完成執行，count為當前已加載完的數量
     progress.innerText = Math.round(((count + 1) / length) * 100) + "%";
@@ -37,6 +39,7 @@ const preLoad = new PreLoad(images, {
 
 // 使用jQuery PerLoad插件
 // $.PreLoad(images, {
+//   order: "ordered", // 有序加載
 //   each: count => {
 //     progress.innerText = Math.round(((count + 1) / length) * 100) + "%";
 //   },
