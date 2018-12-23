@@ -4,6 +4,8 @@
 
 ```javascript
 const preLoad = new PreLoad(images, {
+  // 有序加載 or 無序加載 "unordered", 若無設置為預設無序加載
+  order: "ordered",
   // 每當圖片加載完執行
   each: count => {
     console.log(count + "張圖片加載完成");
@@ -19,6 +21,8 @@ const preLoad = new PreLoad(images, {
 
 ```javascript
 $.PreLoad(images, {
+  // 有序加載 or 無序加載 "unordered", 若無設置為預設無序加載
+  order: "ordered",
   // 每當圖片加載完執行
   each: count => {
     console.log(count + "張圖片加載完成");
